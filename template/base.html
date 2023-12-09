@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cambio Climático</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+</head>
+<body>
+	<h1 class="titulo">CAMBIO CLIMÁTICO</h1>
+	<img src="{% static 'img/cambio-climatico.jpg' %}" width="400px">
+	<ul>
+		<li><a href="{% url 'inicio' %}">Home</a></li>
+		<li><a href="{% url 'noticias:h_noticias' %}">Noticias</a> </li>
+		<li><a href="{% url 'informacion:h_informacion' %}">Información</a> </li>		
+		<li><a href="{% url 'causas:h_causas' %}">Causas</a> </li>
+		<li><a href="{% url 'consecuencias:h_consecuencias' %}">Consecuencias</a> </li>
+		<li><a href="{% url 'solucion:h_solucion' %}">Solución</a> </li>
+		<li><a href="{% url 'contacto' %}">Contacto</a>
+		</li>
+
+	
+
+	{% block contenido %}
+
+	{% endblock contenido %}
+
+</body>
+</html>
